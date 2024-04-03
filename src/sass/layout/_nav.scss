@@ -2,17 +2,21 @@
 @use './abstracts/variables' as *;
 
 .nav-desktop { 
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    height: 60px;
+    position: fixed;
+    width: 100%;
+    display: none;
+    z-index: 10;
     background-color: #fff;
+    &__items {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+    }
     &__link {
-        margin: 0 10px;
-        text-decoration: none;
-        color: $secondary-color;
+        position: relative;
+        padding: 2.8rem 2rem;
     }
     .logo {
         position: absolute;
@@ -20,7 +24,40 @@
         left: 0;
         transform: translateY(-50%);
     }
+    .logo-icon-img {
+        height: 40px;
+    }
     .logo, .logo-icon {
         vertical-align: middle;
+    }
+}
+
+.nav-desktop__link--active {
+    color: $main-color;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $secondary-color;
+        z-index: -1;
+    }
+}
+
+
+
+
+//MEDIA QUERIES
+
+@media ($media-medium) {
+    .burger-btn {
+        display: none;
+    }
+}
+@media ($media-large) {
+    .nav-desktop {
+        display: block;
     }
 }

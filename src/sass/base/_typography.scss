@@ -1,3 +1,6 @@
+@use './abstracts/colors' as *;
+@use './abstracts/variables' as *;
+
 html {
     font-size: 62.5%;
 }
@@ -5,8 +8,20 @@ html {
 body {
     font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
+    font-weight: 500;
 }
 
+.nav-desktop { 
+    &__link {
+        color: $secondary-color;
+        font-size: 1.8rem;
+        text-decoration: none;
+    }
+}
+
+.logo {
+    font-size: 3.6rem;
+}
 
 
 

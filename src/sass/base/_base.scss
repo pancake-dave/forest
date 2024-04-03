@@ -1,3 +1,6 @@
+@use './abstracts/colors' as *;
+@use './abstracts/variables' as *;
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -12,5 +15,30 @@ html {
 }
 
 body {
-  background-color: #333;
+  // background-color: $main-color;
+  background-color: #ddd;
+  height: 200vh;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section-padding {
+  padding: 1em 1em;
+}
+
+//MEDIA QUERIES
+
+@media($media-medium) {
+  .section-padding {
+      padding: 2em 2em;
+  }
+}
+@media($media-large) {
+  .section-padding {
+      padding: 4em 2em;
+  }
 }
