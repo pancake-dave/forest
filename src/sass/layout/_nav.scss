@@ -1,0 +1,26 @@
+@use './abstracts/colors' as *;
+@use './abstracts/variables' as *;
+
+.nav-desktop { 
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+    &__link {
+        margin: 0 10px;
+        text-decoration: none;
+        color: $secondary-color;
+    }
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    .logo, .logo-icon {
+        vertical-align: middle;
+    }
+}

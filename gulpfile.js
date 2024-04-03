@@ -88,7 +88,8 @@ const mainFunctions = parallel(
 	handleKits,
 	sassCompiler,
 	javaScript,
-	convertImg
 );
+
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
 exports.cleanGarbage = cleanGarbage;
+exports.convertImg = convertImg;
