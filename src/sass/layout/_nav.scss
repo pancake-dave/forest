@@ -1,6 +1,40 @@
 @use './abstracts/colors' as *;
 @use './abstracts/variables' as *;
 
+.nav-mobile {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: calc(-100% + 6rem);
+    background-color: #fff;
+    transition: top .3s;
+    &__items {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        top: 45%;
+        transform: translateY(-50%);
+        height: 60%;
+    }
+    &__link {
+        padding: 1.5em 2em;
+    }
+    .logo {
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .logo-icon-img {
+        height: 3rem;
+    }
+}
+
+.nav-mobile--active {
+    top: 0;
+}
+
 .nav-desktop { 
     position: fixed;
     width: 100%;
@@ -16,25 +50,55 @@
     }
     &__link {
         position: relative;
-        padding: 2.8rem 2rem;
+        padding: 3.6rem 2.8rem;
+        transition: color .2s;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s;
+            background-color: $secondary-color;
+            z-index: -1;
+        }
+        &:hover {
+            color: $main-color;
+            &::before {
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+        }
     }
     .logo {
-        position: absolute;
         top: 50%;
-        left: 0;
+        left: 1rem;
         transform: translateY(-50%);
     }
-    .logo-icon-img {
-        height: 40px;
+}
+
+.nav-link {
+    &:focus {
+        outline: 1px solid $focus-gray;
     }
-    .logo, .logo-icon {
-        vertical-align: middle;
-    }
+}
+
+.logo {
+    position: absolute;
+}
+.logo-icon-img {
+    height: 4rem;
+}
+.logo, .logo-icon {
+    vertical-align: middle;
 }
 
 .nav-desktop__link--active {
     color: $main-color;
-    &::before {
+    &::after {
         content: '';
         position: absolute;
         left: 0;
@@ -48,15 +112,18 @@
 
 
 
-
 //MEDIA QUERIES
 
-@media ($media-medium) {
+// @media ($media-medium) {
+    
+// }
+@media ($media-large) {
     .burger-btn {
         display: none;
     }
-}
-@media ($media-large) {
+    .nav-mobile {
+        display: none;
+    }
     .nav-desktop {
         display: block;
     }

@@ -18,23 +18,42 @@
 	<body>
 		<header>
 			<button class="burger-btn">
-	<div class="burger-box">
-		<div class="burger-bars"></div>
+	<div class="burger-btn__box">
+		<div class="burger-btn__bars"></div>
 	</div>
 </button>
-<nav class="nav nav-mobile"></nav>
+<nav class="nav nav-mobile">
+	<div class="wrapper nav-mobile__items">
+		<a href="#" class="nav-mobile__link nav-link nav-mobile__link--active">Home</a>
+		<a href="#" class="nav-mobile__link nav-link">O nas</a>
+		<a href="#" class="nav-mobile__link nav-link">Oferta</a>
+		<a href="#" class="nav-mobile__link nav-link">Kontakt</a>
+	</div>
+	<p class="logo">
+		<span class="logo-icon"
+			><img
+				src="../dist/img/icons/forest_logo.svg"
+				alt=""
+				class="logo-icon-img"
+		/></span>
+		Forest
+	</p>
+</nav>
 <nav class="nav nav-desktop">
 	<div class="wrapper nav-desktop__items">
 		<p class="logo">
 			<span class="logo-icon"
-				><img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon-img"
+				><img
+					src="../dist/img/icons/forest_logo.svg"
+					alt=""
+					class="logo-icon-img"
 			/></span>
 			Forest
 		</p>
-		<a href="#" class="nav-desktop__link nav-desktop__link--active">Home</a>
-		<a href="#" class="nav-desktop__link">O nas</a>
-		<a href="#" class="nav-desktop__link">Oferta</a>
-		<a href="#" class="nav-desktop__link">Kontakt</a>
+		<a href="#" class="nav-desktop__link nav-link nav-desktop__link--active">Home</a>
+		<a href="#" class="nav-desktop__link nav-link">O nas</a>
+		<a href="#" class="nav-desktop__link nav-link">Oferta</a>
+		<a href="#" class="nav-desktop__link nav-link">Kontakt</a>
 	</div>
 </nav>
 
