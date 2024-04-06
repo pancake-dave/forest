@@ -33,6 +33,14 @@ body {
     text-transform: uppercase;
 }
 
+.about-us {
+    color: $secondary-color;
+    &__text {
+        text-align: justify;
+        line-height: 1.4em;
+    }
+}
+
 
 
 // <weight>: Use a value from 100 to 900

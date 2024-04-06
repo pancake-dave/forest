@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  // background-color: $main-color;
-  background-color: #ddd;
+  background-color: $main-color;
+  // background-color: #ddd;
   height: 200vh;
   // overflow: hidden;
 }
@@ -41,9 +41,15 @@ body {
   .section-padding {
       padding: 3rem 3rem;
   }
+  .section-title {
+    padding-bottom: 3rem;
+  }
 }
 @media($media-large) {
   .section-padding {
       padding: 4rem 4rem;
+  }
+  .section-title {
+    padding-bottom: 4rem;
   }
 }
