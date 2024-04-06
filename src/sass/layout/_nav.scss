@@ -75,7 +75,8 @@
     }
     .logo {
         top: 50%;
-        left: 1rem;
+        left: 0;
+        padding-left: 4rem;
         transform: translateY(-50%);
     }
 }

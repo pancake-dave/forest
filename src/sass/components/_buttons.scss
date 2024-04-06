@@ -31,10 +31,11 @@
     }
     &__bars::before {
         content: '';
-        top: -14px;
+        top: -13px;
     }
     &__bars::after {
         content: '';
+        top: 13px
     }
 }
 

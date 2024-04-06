@@ -78,7 +78,7 @@ function watchForChanges(done) {
 	watch("./*.html").on("change", reload);
 	watch(
 		[paths.html, paths.sass, paths.js],
-		parallel(sassCompiler, javaScript)
+		parallel(sassCompiler, javaScript, handleKits)
 	).on("change", reload);
 	watch(paths.img, convertImg);
 	done();
