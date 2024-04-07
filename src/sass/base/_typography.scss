@@ -1,6 +1,14 @@
 @use './abstracts/colors' as *;
 @use './abstracts/variables' as *;
 
+// <weight>: Use a value from 100 to 900
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+
 html {
     font-size: 62.5%;
 }
@@ -29,24 +37,80 @@ body {
 
 .section-title {
     font-size: 2.8rem;
-    font-weight: normal;
+    font-weight: 250;
     text-transform: uppercase;
 }
 
 .about-us {
     color: $secondary-color;
+    &__heading {
+        font-size: 1.8rem;
+    }
     &__text {
         text-align: justify;
         line-height: 1.4em;
+        font-weight: 300;
     }
 }
 
+.separator-row {
+    color: $main-color;
+    font-size: 2rem;
+    font-weight: 700;
+}
 
+//MEDIA QUERIES
 
-// <weight>: Use a value from 100 to 900
-.raleway {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-  }
+@media ($media-medium) {
+    .section-title {
+        font-size: 3rem;
+    }
+    .about-us {
+        &__heading {
+            font-size: 2rem;
+        }
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+    .separator-row {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+
+@media ($media-large) {
+    .section-title {
+        font-size: 3.6rem;
+    }
+    .about-us {
+        &__heading {
+            font-size: 2.4rem;
+        }
+        &__text {
+            line-height: 1.6em;
+        }
+    }
+    .separator-row {
+        font-size: 3.6rem;
+    }
+}
+
+@media ($media-xlarge) {
+    .section-title {
+        font-size: 4.2rem;
+    }
+    .about-us {
+        &__heading {
+            font-size: 3.2rem;
+        }
+        &__text {
+            font-size: 2rem;
+            line-height: 1.8em;
+        }
+    }
+    .separator-row {
+        font-size: 4.6rem;
+    }
+}
+

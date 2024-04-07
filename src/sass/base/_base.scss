@@ -4,6 +4,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 *,
@@ -35,21 +36,27 @@ body {
   padding-bottom: 2rem;
 }
 
+
+
 //MEDIA QUERIES
 
 @media($media-medium) {
   .section-padding {
-      padding: 3rem 3rem;
-  }
-  .section-title {
-    padding-bottom: 3rem;
-  }
-}
-@media($media-large) {
-  .section-padding {
-      padding: 4rem 4rem;
+      padding: 4rem 3rem;
   }
   .section-title {
     padding-bottom: 4rem;
   }
+}
+@media($media-large) {
+  html {
+    scroll-padding-top: 8.9rem;
+  }
+  .section-padding {
+      padding: 6rem 4rem;
+  }
+  .section-title {
+    padding-bottom: 6rem;
+  }
+
 }

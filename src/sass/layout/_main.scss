@@ -1,5 +1,8 @@
 @use './abstracts/colors' as *;
 @use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+
+// ABOUT-US
 
 .about-us {
     display: flex;
@@ -12,10 +15,106 @@
         justify-content: center;
         align-items: center;
     }
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__img {
         width: 100%;
     }
     &__heading {
         padding: 1em 0;
+    }
+}
+
+// SEPARATOR ROW
+
+.separator-row {
+    position: relative;
+    display: flex;
+    height: 25vh;
+    background-image: url("/dist/img/girl_small.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -5;
+    &__hero-shadow {
+        @include hero-shadow;
+        background-color: rgba(6, 24, 0, 0.6);
+    }
+    &__content__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        border: 1px solid $main-color;
+        text-align: center;
+    }
+    &__content__text {
+        padding: .5em 2em;
+    }
+}
+
+//MEDIA QUERIES
+
+@media ($media-xsmall) {
+    .separator-row {
+        &__content__text {
+            padding: .8em 3em;
+        }
+    }
+}
+
+@media ($media-small) {
+    .separator-row {
+        &__content__text {
+            padding: 1em 4em;
+        }
+    }
+}
+
+@media ($media-medium) {
+    .separator-row {
+        &__content__text {
+            padding: 1em 4em;
+        }
+    }
+}
+
+@media ($media-large) {
+    .about-us {
+        &__content {
+            display: flex;
+            flex-direction: row;
+            column-gap: 2em;
+        }
+        &__img {
+            flex-basis: 50%;
+            
+        }
+        &__heading {
+            align-self: start;
+            padding-top: 0;
+        }
+        &__text-box {
+            flex-basis: 50%;
+            align-self: start;
+         }
+    }
+    .separator-row {
+        height: 40vh;
+        background-image: url("/dist/img/girl_large.jpg");
+    }
+}
+
+@media ($media-xlarge) {
+    .about-us {
+        &__content {
+            column-gap: 4em;
+        }
+    }
+    .separator-row {
+        background-image: url("/dist/img/girl_xlarge.jpg");
     }
 }
