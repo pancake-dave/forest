@@ -1,5 +1,6 @@
 @use './abstracts/colors' as *;
 @use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
 
 // <weight>: Use a value from 100 to 900
 .raleway {
@@ -57,6 +58,24 @@ body {
     color: $main-color;
     font-size: 2rem;
     font-weight: 700;
+}
+
+.offer__card {
+    &__list-item--inactive {
+        color: $inactive-gray;
+    }
+    &__title {
+        font-size: 2rem;
+    }
+    &__price {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    &__btn {
+        font-family: "Raleway", sans-serif;
+        font-size: 1.6rem;
+        // font-weight: 200;
+    }
 }
 
 //MEDIA QUERIES

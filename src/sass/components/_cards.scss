@@ -1,0 +1,31 @@
+@use './abstracts/colors' as *;
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+
+.offer__card {
+    width: 270px;
+    height: 400px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0,0,0, .3);
+    &__item {
+        padding-bottom: 1em;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__list-item {
+        padding-bottom: .5em;
+        .fa-check {
+            color: $green;
+        }
+        i {
+            padding-right: 1em;
+        }
+    }
+}

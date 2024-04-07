@@ -1,5 +1,6 @@
 @use './abstracts/colors' as *;
 @use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
 
 .burger-btn {
     position: fixed;
@@ -10,7 +11,7 @@
     border: 1px solid transparent;
     z-index: 100;
     cursor: pointer;
-    &:focus {
+    &:focus-visible {
         outline: 1px solid $focus-gray;    
     }
     &__box {
@@ -52,5 +53,19 @@
             top: 0px;
             transform: rotate(-90deg);
         }
+    }
+}
+
+.offer__card__btn {
+    padding: .8em 3em;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0,0,0, .3);
+    transition: background-color .3s, box-shadow .3s;
+    cursor: pointer;
+    &:hover {
+        background-color: $green;
+        box-shadow: 0px 5px 10px rgba(42, 222, 114, .7);
     }
 }

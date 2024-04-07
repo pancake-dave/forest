@@ -42,11 +42,14 @@
         @include hero-shadow;
         background-color: rgba(6, 24, 0, 0.6);
     }
+    &__content {
+        position: relative;
+    }
     &__content__text-box {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 60%;
+        width: 80%;
         transform: translate(-50%, -50%);
         border: 1px solid $main-color;
         text-align: center;
@@ -54,6 +57,20 @@
     &__content__text {
         padding: .5em 2em;
     }
+}
+
+// OFFER
+
+.offer__caption {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.offer__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 //MEDIA QUERIES
@@ -80,6 +97,9 @@
             padding: 1em 4em;
         }
     }
+    .offer__caption {
+        padding-bottom: 4rem;
+    }
 }
 
 @media ($media-large) {
@@ -105,6 +125,9 @@
     .separator-row {
         height: 40vh;
         background-image: url("/dist/img/girl_large.jpg");
+    }
+    .offer__caption {
+        padding-bottom: 6rem;
     }
 }
 
