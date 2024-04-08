@@ -65,11 +65,14 @@ body {
         color: $inactive-gray;
     }
     &__title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     &__price {
-        font-size: 3rem;
-        font-weight: bold;
+        font-size: 3.4rem;
+        font-weight: 600;
+    }
+    &__list {
+        font-size: 1.6rem;
     }
     &__btn {
         font-family: "Raleway", sans-serif;
@@ -96,6 +99,22 @@ body {
         font-size: 3rem;
         font-weight: 700;
     }
+    .offer {
+        &__caption {
+            font-size: 1.8rem;
+        }
+        &__card {
+            &__title {
+                font-size: 2.4rem;
+            }
+            &__price {
+                font-size: 3.6rem;
+            }
+            &__btn {
+                font-size: 1.8rem;
+            }
+        }
+    }
 }
 
 @media ($media-large) {
@@ -112,6 +131,25 @@ body {
     }
     .separator-row {
         font-size: 3.6rem;
+    }
+    .offer {
+        &__caption {
+            font-size: 2rem;
+        }
+        &__card {
+            &__title {
+                font-size: 2.8rem;
+            }
+            &__price {
+                font-size: 4rem;
+            }
+            &__list {
+                font-size: 1.8rem;
+            }
+            &__btn {
+                font-size: 2rem;
+            }
+        }
     }
 }
 
@@ -130,6 +168,23 @@ body {
     }
     .separator-row {
         font-size: 4.6rem;
+    }
+    .offer {
+        &__caption {
+            font-size: 2.4rem;
+        }
+        &__card {
+            &__title {
+                font-size: 3.2rem;
+            }
+            &__price {
+                font-size: 5rem;
+                font-weight: 600;
+            }
+            &__list {
+                font-size: 2rem;
+            }
+        }
     }
 }
 

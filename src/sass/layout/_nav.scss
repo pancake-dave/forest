@@ -9,6 +9,7 @@
     top: calc(-100% + 6rem);
     background-color: #fff;
     transition: top .3s;
+    z-index: 100;
     &__items {
         position: relative;
         display: flex;

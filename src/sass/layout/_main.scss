@@ -36,14 +36,19 @@
     height: 25vh;
     background-image: url("/dist/img/girl_small.jpg");
     background-position: center;
-    background-size: cover;
-    z-index: -5;
+    background-size: 100%;
+    transition: background-size 2s;
+    &:hover {
+        background-size: 140%;
+    }
     &__hero-shadow {
         @include hero-shadow;
         background-color: rgba(6, 24, 0, 0.6);
+        pointer-events: none;
     }
     &__content {
         position: relative;
+        pointer-events: none;
     }
     &__content__text-box {
         position: absolute;
@@ -97,6 +102,14 @@
             padding: 1em 4em;
         }
     }
+    .offer__cards {
+        flex-direction: row;
+        justify-content: space-around;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        flex-wrap: wrap;
+        
+    }
     .offer__caption {
         padding-bottom: 4rem;
     }
@@ -139,5 +152,9 @@
     }
     .separator-row {
         background-image: url("/dist/img/girl_xlarge.jpg");
+    }
+    .offer__cards {
+        justify-content: center;
+        column-gap: 3.2rem;
     }
 }
