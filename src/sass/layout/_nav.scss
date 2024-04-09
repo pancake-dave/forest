@@ -23,7 +23,7 @@
     &__link {
         padding: 1.5em 2em;
     }
-    .logo {
+    &__logo {
         bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
@@ -76,12 +76,7 @@
             }
         }
     }
-    .logo {
-        top: 50%;
-        left: 0;
-        padding-left: 4rem;
-        transform: translateY(-50%);
-    }
+
 }
 
 .nav-link {
@@ -90,15 +85,26 @@
     }
 }
 
-.logo {
-    position: absolute;
-}
+// .nav {
+//     &__logo {
+//         position: absolute;
+//         top: 50%;
+//         left: 0;
+//         padding-left: 4rem;
+//         transform: translateY(-50%);
+//     }
+// }
+
+// .logo {
+//     position: absolute;
+//     cursor: default;
+// }
 .logo-icon-img {
     height: 4rem;
 }
-.logo, .logo-icon {
-    vertical-align: middle;
-}
+// .logo, .logo-icon-img {
+//     vertical-align: middle;
+// }
 
 .nav-desktop__link--active {
     color: $main-color;

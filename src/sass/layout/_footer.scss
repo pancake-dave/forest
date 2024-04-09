@@ -1,3 +1,26 @@
 @use './abstracts/colors' as *;
 @use './abstracts/variables' as *;
 @use './abstracts/mixins' as *;
+
+.footer {
+    height: 100%;
+    background-color: $light-gray;
+    &__logo {
+        // position: absolute;
+    }
+    &__logo, &__logo-icon-img {
+        vertical-align: middle;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+    }
+
+    &__date {
+        width: 100vw;
+        border-top: 1px solid $gray;
+    }
+}

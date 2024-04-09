@@ -39,7 +39,7 @@
     background-size: 100%;
     transition: background-size 2s;
     &:hover {
-        background-size: 140%;
+        background-size: 125%;
     }
     &__hero-shadow {
         @include hero-shadow;

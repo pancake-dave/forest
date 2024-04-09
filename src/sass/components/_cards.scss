@@ -28,6 +28,11 @@
             padding-right: 1em;
         }
     }
+    &__btn {
+        &:focus-visible {
+            outline: 1px solid $focus-gray;    
+        }
+    } 
 }
 
 //MEDIA QUERIES
@@ -43,6 +48,12 @@
     }
 }
 @media ($media-large) {
+    .offer__card {
+        height: 440px;
+    }
+}
+
+@media ($media-xlarge) {
     .offer__card {
         width: 330px;
         height: 480px;
