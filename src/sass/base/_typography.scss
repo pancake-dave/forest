@@ -77,7 +77,27 @@ body {
     &__btn {
         font-family: "Raleway", sans-serif;
         font-size: 1.6rem;
-        // font-weight: 200;
+    }
+}
+
+.footer {
+    &__content {
+            
+        &__heading {
+            font-size: 2.4rem;
+        }
+        &__list {
+            a {
+                font-size: 2.2rem;
+                color: $secondary-color;
+            }
+        }
+    }
+    &__date {
+
+    }
+    .logo-text {
+        font-size: 3.8rem;
     }
 }
 
@@ -149,6 +169,11 @@ body {
             &__btn {
                 font-size: 2rem;
             }
+        }
+    }
+    .footer {
+        .logo-text {
+            font-size: 3.8rem;
         }
     }
 }

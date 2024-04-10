@@ -23,6 +23,15 @@
     &__link {
         padding: 1.5em 2em;
     }
+    &__logo {
+        position: absolute;
+        bottom: 1.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        .logo-icon {
+            height: 3rem;
+        }
+    }
 }
 
 .nav-mobile--active {
@@ -69,7 +78,15 @@
             }
         }
     }
-
+    &__logo {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .logo-icon {
+            height: 4rem;
+        }
+    }
 }
 
 .nav-link {
