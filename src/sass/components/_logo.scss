@@ -1,0 +1,28 @@
+.logo {
+    .logo-text, 
+    .logo-icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    cursor: default;
+}
+
+.nav-mobile__logo {
+    position: absolute;
+    bottom: 1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    .logo-icon {
+        height: 3rem;
+    }
+}
+
+.nav-desktop__logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .logo-icon {
+        height: 4rem;
+    }
+}
