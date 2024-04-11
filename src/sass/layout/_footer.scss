@@ -2,44 +2,113 @@
 @use './abstracts/variables' as *;
 @use './abstracts/mixins' as *;
 
+// .footer {
+//     height: 100%;
+//     padding-bottom: 0;
+//     background-color: $light-gray;
+//     &__content {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         &__heading {
+//             padding-bottom: 1.6rem;
+//         }
+//         &__box {
+//             width: 80%;
+//         }
+//         &__list {
+//             list-style: none;
+//             padding-bottom: 2rem;
+//             &__item {
+//                 display: inline-block;
+//                 padding-bottom: 1rem;
+//                 padding-left: 9rem;
+//                 text-decoration: none;
+//             }
+//         }
+//     }
+//     &__logo {
+//         padding-bottom: 2rem;
+//         .logo-icon {
+//             height: 4rem;
+//         }
+//     }
+//     &__date {
+//         width: 100vw;
+//         height: 70px;
+//         border-top: 1px solid $gray;
+//         text-align: center;
+//         &__text {
+//             line-height: 70px;
+//         }
+//     }
+// }
+
 .footer {
-    height: 100%;
+    // height: 100%;
+    overflow: hidden;
     padding-bottom: 0;
     background-color: $light-gray;
     &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: repeat(5, auto);
         &__heading {
             padding-bottom: 1.6rem;
         }
         &__box {
-            width: 80%;
+            &__aboutus{
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+            &__company{
+                grid-column: 2/3;
+                grid-row: 3/4;
+            }
+            &__docs{
+                grid-column: 2/3;
+                grid-row: 4/5;
+            }
         }
         &__list {
             list-style: none;
             padding-bottom: 2rem;
-            a {
-                padding: 0.5rem;
-                padding-left: 9rem;
+            &__item {
+                display: block;
+                padding: .5rem .5rem 1rem 3rem ;
+                // padding-bottom: 1rem;
+                // padding-left: 6rem;
                 text-decoration: none;
             }
         }
-        &__list-item {
-            padding-bottom: 1rem;
-        }
     }
     &__logo {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        justify-self: center;
         padding-bottom: 2rem;
         .logo-icon {
             height: 4rem;
         }
     }
     &__date {
+        // position: relative;
+        grid-column: 1/4;
+        grid-row: -1/-2;
+        align-self: end;
         width: 100vw;
         height: 70px;
-        border-top: 1px solid $gray;
+        // border-top: 1px solid $gray;
         text-align: center;
+        &__line {
+            // position: absolute;
+            // top: 0;
+            // left: -10rem;
+            // width: 150vw;
+            height: 1px;
+            background-color: $gray;
+        }
         &__text {
             line-height: 70px;
         }
