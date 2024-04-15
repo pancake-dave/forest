@@ -25,7 +25,7 @@
             color: $green;
         }
         i {
-            padding-right: 1em;
+            padding-right: .5em;
         }
     }
     &__btn {
@@ -37,25 +37,8 @@
 
 //MEDIA QUERIES
 
-@media ($media-small) {
-    .offer__card {
-        width: 300px;
-    }
-}
 @media ($media-medium) {
     .offer__card {
-        height: 430px;
-    }
-}
-@media ($media-large) {
-    .offer__card {
-        height: 440px;
-    }
-}
-
-@media ($media-xlarge) {
-    .offer__card {
-        width: 330px;
-        height: 480px;
+        height: 410px;
     }
 }

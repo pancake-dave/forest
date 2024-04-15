@@ -57,6 +57,7 @@
         height: 9rem;
         padding: 3.6rem 2.8rem;
         transition: color .2s;
+        transition-delay: 100ms;
         &::before {
             content: '';
             position: absolute;
@@ -67,6 +68,7 @@
             transform-origin: right;
             transform: scaleX(0);
             transition: transform .3s;
+            transition-delay: 100ms;
             background-color: $secondary-color;
             z-index: -1;
         }

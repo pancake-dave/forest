@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest - oferta</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
 	href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
@@ -10,20 +14,22 @@
 	src="https://kit.fontawesome.com/ae2b96c868.js"
 	crossorigin="anonymous"></script>
 
+	</head>
 	<body>
-        <button class="burger-btn">
+		<header class="header">
+			<button class="burger-btn">
 	<div class="burger-btn__box">
 		<div class="burger-btn__bars"></div>
 	</div>
 </button>
 <nav class="nav nav-mobile">
 	<div class="wrapper nav-mobile__items">
-		<a href="#" class="nav-mobile__link nav-link nav-mobile__link--active"
+		<a href="#" class="nav-mobile__link nav-link"
 			>Home</a
 		>
 		<a href="#about-us" class="nav-mobile__link nav-link">O nas</a>
 		<a href="#offer" class="nav-mobile__link nav-link">Oferta</a>
-		<a href="#" class="nav-mobile__link nav-link">Kontakt</a>
+		<a href="/contact.html" class="nav-mobile__link nav-link">Kontakt</a>
 	</div>
 	<div class="logo nav-mobile__logo">
 		<img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
@@ -36,17 +42,18 @@
 			<img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
 			<p class="logo-text">Forest</p>
 		</div>
-		<a href="#" class="nav-desktop__link nav-link nav-desktop__link--active"
+		<a href="#" class="nav-desktop__link nav-link nav-link-home nav-desktop__link--active"
 			>Home</a
 		>
-		<a href="#about-us" class="nav-desktop__link nav-link">O nas</a>
-		<a href="#offer" class="nav-desktop__link nav-link">Oferta</a>
-		<a href="#" class="nav-desktop__link nav-link">Kontakt</a>
+		<a href="#about-us" class="nav-desktop__link nav-link nav-link-aboutus">O nas</a>
+		<a href="#offer" class="nav-desktop__link nav-link nav-link-offer">Oferta</a>
+		<a href="/contact.html" class="nav-desktop__link nav-link nav-link-contact">Kontakt</a>
 	</div>
 </nav>
 
-		<p>Strona główna!</p>
-        <footer class="footer section-padding">
+			<div class="header__separator"></div>
+
+		<footer class="footer section-padding">
 	<div class="footer__content wrapper">
 		<div class="logo footer__logo">
 			<img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />

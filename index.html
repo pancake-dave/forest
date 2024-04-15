@@ -16,7 +16,7 @@
 
 	</head>
 	<body>
-		<header class="header">
+		<header class="header section">
 			<button class="burger-btn">
 	<div class="burger-btn__box">
 		<div class="burger-btn__bars"></div>
@@ -24,12 +24,12 @@
 </button>
 <nav class="nav nav-mobile">
 	<div class="wrapper nav-mobile__items">
-		<a href="#" class="nav-mobile__link nav-link nav-mobile__link--active"
+		<a href="#" class="nav-mobile__link nav-link"
 			>Home</a
 		>
 		<a href="#about-us" class="nav-mobile__link nav-link">O nas</a>
 		<a href="#offer" class="nav-mobile__link nav-link">Oferta</a>
-		<a href="#" class="nav-mobile__link nav-link">Kontakt</a>
+		<a href="/contact.html" class="nav-mobile__link nav-link">Kontakt</a>
 	</div>
 	<div class="logo nav-mobile__logo">
 		<img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
@@ -42,12 +42,12 @@
 			<img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
 			<p class="logo-text">Forest</p>
 		</div>
-		<a href="#" class="nav-desktop__link nav-link nav-desktop__link--active"
+		<a href="#" class="nav-desktop__link nav-link nav-link-home nav-desktop__link--active"
 			>Home</a
 		>
-		<a href="#about-us" class="nav-desktop__link nav-link">O nas</a>
-		<a href="#offer" class="nav-desktop__link nav-link">Oferta</a>
-		<a href="#" class="nav-desktop__link nav-link">Kontakt</a>
+		<a href="#about-us" class="nav-desktop__link nav-link nav-link-aboutus">O nas</a>
+		<a href="#offer" class="nav-desktop__link nav-link nav-link-offer">Oferta</a>
+		<a href="/contact.html" class="nav-desktop__link nav-link nav-link-contact">Kontakt</a>
 	</div>
 </nav>
 
@@ -63,7 +63,7 @@
 			</div>
 		</header>
 		<main>
-			<section class="about-us section-padding" id="about-us">
+			<section class="about-us section-padding section" id="about-us">
 				<h2 class="about-us__title section-title">o nas</h2>
 				<div class="about-us__content wrapper">
 					<img
@@ -94,7 +94,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="offer section-padding" id="offer">
+			<section class="offer section-padding section" id="offer">
 				<h2 class="offer__title section-title">oferta</h2>
 				<p class="offer__caption">Wybierz jedną z naszych wspaniałych ofert!</p>
 				<div class="wrapper offer__cards">
