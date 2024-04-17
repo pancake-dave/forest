@@ -22,37 +22,37 @@ const removeActiveLink = () => {
 };
 
 const handleDesktopNav = (e) => {
-	navLinkClicked = true;
+	// navLinkClicked = true;
 	removeActiveLink();
 	e.target.classList.add("nav-desktop__link--active");
 };
 
-// const handleScroll = () => {
-// 	if (navLinkClicked == false) {
-// 		const currentSection = window.scrollY;
-// 		allSections.forEach((section) => {
-// 			if (
-// 				section.classList.contains("header") &&
-// 				section.offsetTop == currentSection
-// 			) {
-// 				removeActiveLink();
-// 				navLinkHome.classList.add("nav-desktop__link--active");
-// 			} else if (
-// 				section.classList.contains("about-us") &&
-// 				section.offsetTop <= currentSection + 90
-// 			) {
-// 				removeActiveLink();
-// 				navLinkAboutUs.classList.add("nav-desktop__link--active");
-// 			} else if (
-// 				section.classList.contains("offer") &&
-// 				section.offsetTop <= currentSection + 90
-// 			) {
-// 				removeActiveLink();
-// 				navLinkOffer.classList.add("nav-desktop__link--active");
-// 			}
-// 		});
-// 	}
-// };
+const handleScroll = () => {
+	if (navLinkClicked == false) {
+		const currentPosition = window.scrollY;
+		allSections.forEach((section) => {
+			if (
+				section.classList.contains("header") &&
+				section.offsetTop == currentPosition
+			) {
+				removeActiveLink();
+				navLinkHome.classList.add("nav-desktop__link--active");
+			} else if (
+				section.classList.contains("about-us") &&
+				section.offsetTop <= currentPosition + 90
+			) {
+				removeActiveLink();
+				navLinkAboutUs.classList.add("nav-desktop__link--active");
+			} else if (
+				section.classList.contains("offer") &&
+				section.offsetTop <= currentPosition + 90
+			) {
+				removeActiveLink();
+				navLinkOffer.classList.add("nav-desktop__link--active");
+			}
+		});
+	}
+};
 
 navDesktopItems.forEach((item) => {
 	item.addEventListener("click", handleDesktopNav);
@@ -77,4 +77,4 @@ navMobileItems.forEach((item) => {
 	item.addEventListener("click", handleMobileNav);
 });
 burgerBtn.addEventListener("click", handleMobileNav);
-// window.addEventListener("scroll", handleScroll);
+window.addEventListener("scroll", handleScroll);
