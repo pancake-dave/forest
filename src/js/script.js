@@ -8,7 +8,7 @@ const navLinkOffer = document.querySelector(".nav-link-offer");
 const navLinkContact = document.querySelector(".nav-link-contact");
 const allSections = document.querySelectorAll(".section");
 
-let naVlinkClicked = false;
+let navLinkClicked = false;
 
 const handleMobileNav = () => {
 	navMobile.classList.toggle("nav-mobile--active");
@@ -22,44 +22,59 @@ const removeActiveLink = () => {
 };
 
 const handleDesktopNav = (e) => {
-	naVlinkClicked = true;
+	navLinkClicked = true;
 	removeActiveLink();
 	e.target.classList.add("nav-desktop__link--active");
 };
 
-const handleObserver = () => {
-	if (naVlinkClicked === false) {
-		const currentSection = window.scrollY;
-		allSections.forEach((section) => {
-			if (
-				section.classList.contains("header") &&
-				section.offsetTop == currentSection
-			) {
-				removeActiveLink();
-				navLinkHome.classList.add("nav-desktop__link--active");
-			} else if (
-				section.classList.contains("about-us") &&
-				section.offsetTop <= currentSection + 90
-			) {
-				removeActiveLink();
-				navLinkAboutUs.classList.add("nav-desktop__link--active");
-			} else if (
-				section.classList.contains("offer") &&
-				section.offsetTop <= currentSection + 90
-			) {
-				removeActiveLink();
-				navLinkOffer.classList.add("nav-desktop__link--active");
-			}
-		});
-	}
-	// naVlinkClicked = false;
-};
+// const handleScroll = () => {
+// 	if (navLinkClicked == false) {
+// 		const currentSection = window.scrollY;
+// 		allSections.forEach((section) => {
+// 			if (
+// 				section.classList.contains("header") &&
+// 				section.offsetTop == currentSection
+// 			) {
+// 				removeActiveLink();
+// 				navLinkHome.classList.add("nav-desktop__link--active");
+// 			} else if (
+// 				section.classList.contains("about-us") &&
+// 				section.offsetTop <= currentSection + 90
+// 			) {
+// 				removeActiveLink();
+// 				navLinkAboutUs.classList.add("nav-desktop__link--active");
+// 			} else if (
+// 				section.classList.contains("offer") &&
+// 				section.offsetTop <= currentSection + 90
+// 			) {
+// 				removeActiveLink();
+// 				navLinkOffer.classList.add("nav-desktop__link--active");
+// 			}
+// 		});
+// 	}
+// };
 
-window.addEventListener("scroll", handleObserver);
 navDesktopItems.forEach((item) => {
 	item.addEventListener("click", handleDesktopNav);
+	// item.addEventListener("click", () => {
+	// 	const targetSectionId = item.getAttribute("href").substring(1);
+	// 	const targetSection = document.getElementById(targetSectionId);
+	// 	const scrollOffset = 90;
+	// 	const scrollThreshold = targetSection.offsetTop - scrollOffset;
+
+	// 	const resetNavLinkClicked = () => {
+	// 		if (window.scrollY >= scrollThreshold) {
+	// 			console.log('reset');
+	// 			navLinkClicked = false;
+	// 			window.removeEventListener("scroll", resetNavLinkClicked);
+	// 		}
+	// 	};
+
+	// 	window.addEventListener("scroll", resetNavLinkClicked);
+	// });
 });
 navMobileItems.forEach((item) => {
 	item.addEventListener("click", handleMobileNav);
 });
 burgerBtn.addEventListener("click", handleMobileNav);
+// window.addEventListener("scroll", handleScroll);
