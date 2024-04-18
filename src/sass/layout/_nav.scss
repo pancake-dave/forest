@@ -67,15 +67,11 @@
             width: 101%;
             transform-origin: right;
             transform: scaleX(0);
-            transition: transform .3s;
+            transition: transform .2s;
             transition-delay: 150ms;
             background-color: $secondary-color;
             z-index: -1;
         }
-        // &:hover {
-        //     color: $inactive-gray;
-        //     color: $focus-gray;
-        // }
         &:hover {
             color: $main-color;
             &::before {

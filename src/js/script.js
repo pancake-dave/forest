@@ -5,9 +5,6 @@ const navMobileItems = document.querySelectorAll(".nav-mobile__link");
 const navDesktopItems = document.querySelectorAll(".nav-desktop__link");
 const allSections = document.querySelectorAll(".section");
 
-const navDesktopStyles = window.getComputedStyle(navDesktop);
-const navDesktopDisplay = navDesktopStyles.getPropertyValue("display");
-
 let observerEnabled = true;
 
 const handleMobileNav = () => {
@@ -26,6 +23,11 @@ const handleDesktopNav = (e) => {
 			if (
 				section.classList.contains(target) &&
 				section.offsetTop == currentPosition + 90
+			) {
+				observerEnabled = true;
+			} else if (
+				section.classList.contains("home") &&
+				section.offsetTop == currentPosition
 			) {
 				observerEnabled = true;
 			}
