@@ -64,14 +64,18 @@
             left: 0;
             top: 0;
             height: 100%;
-            width: 100%;
+            width: 101%;
             transform-origin: right;
             transform: scaleX(0);
             transition: transform .3s;
-            transition-delay: 100ms;
+            transition-delay: 150ms;
             background-color: $secondary-color;
             z-index: -1;
         }
+        // &:hover {
+        //     color: $inactive-gray;
+        //     color: $focus-gray;
+        // }
         &:hover {
             color: $main-color;
             &::before {
@@ -99,15 +103,9 @@
 
 .nav-desktop__link--active {
     color: $main-color;
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: $secondary-color;
-        z-index: -1;
+    &::before {
+        transform-origin: left;
+        transform: scaleX(1);
     }
 }
 
