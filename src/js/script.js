@@ -4,6 +4,7 @@ const navDesktop = document.querySelector(".nav-desktop");
 const navMobileItems = document.querySelectorAll(".nav-mobile__link");
 const navDesktopItems = document.querySelectorAll(".nav-desktop__link");
 const allSections = document.querySelectorAll(".section");
+const footerYear = document.querySelector(".footer__year");
 
 let observerEnabled = true;
 
@@ -63,6 +64,12 @@ const observer = new IntersectionObserver(handleIntersection, {
 	threshold: 1,
 });
 
+const currentDate = () => {
+	const date = new Date()
+	footerYear.innerText = date.getFullYear()
+}
+
+currentDate()
 allSections.forEach((section) => {
 	observer.observe(section);
 });

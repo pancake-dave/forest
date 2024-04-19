@@ -9,7 +9,32 @@
 	<body>
 		<header class="header">
 			<!-- @include "nav_contact.kit" -->
-			<div class="header__separator"></div>
+		</header>
+		<div class="header__separator"></div>
+		<div class="contact section-padding wrapper">
+			<div class="contact__form contact__box">
+				<form action="" class="contact__form__box">
+					<label for="" class="contact__form__box_label">Twoje imię</label>
+					<input type="text" class="contact__form__box_input" />
+					<label for="" class="contact__form__box_label">Twój adres email</label>
+					<input type="text" class="contact__form__box_input" />
+					<label for="" class="contact__form__box_label">Twoja wiadomość</label>
+					<textarea name="" id="" cols="30" rows="10" class="contact__form__box_textarea"></textarea>
+					<button class="contact__form__box__btn">wyślij</button>
+				</form>
+			</div>
+			<div class="contact__map contact__box">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.846237987554!2d19.88972679713552!3d50.08916563989637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1713529974289!5m2!1spl!2spl"
+					width=""
+					height=""
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					class="contact__map__frame"></iframe>
+			</div>
+		</div>
 
 		<!-- @include "footer.kit" -->
 		<script src="./dist/js/script.min.js"></script>
