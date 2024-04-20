@@ -37,6 +37,10 @@
                 padding: .5rem;
                 padding-left: 0;
                 text-decoration: none;
+                &:focus-visible {
+                    outline: none;
+                    font-weight: bold;
+                }
             }
         }
     }

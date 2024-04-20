@@ -28,11 +28,6 @@
             padding-right: .5em;
         }
     }
-    &__btn {
-        &:focus-visible {
-            outline: 1px solid $focus-gray;    
-        }
-    } 
 }
 
 //MEDIA QUERIES

@@ -101,6 +101,18 @@ body {
     }
 }
 
+.contact {
+    &__form {
+        &__box {
+            font-size: 1.6rem;
+            &__btn {
+                font-family: "Raleway", sans-serif;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
 //MEDIA QUERIES
 
 @media ($media-medium) {

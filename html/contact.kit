@@ -12,16 +12,58 @@
 		</header>
 		<div class="header__separator"></div>
 		<div class="contact section-padding wrapper">
+			<h2 class="contact__title section-title">skontaktuj się z nami</h2>
 			<div class="contact__form contact__box">
-				<form action="" class="contact__form__box">
-					<label for="" class="contact__form__box_label">Twoje imię</label>
-					<input type="text" class="contact__form__box_input" />
-					<label for="" class="contact__form__box_label">Twój adres email</label>
-					<input type="text" class="contact__form__box_input" />
-					<label for="" class="contact__form__box_label">Twoja wiadomość</label>
-					<textarea name="" id="" cols="30" rows="10" class="contact__form__box_textarea"></textarea>
-					<button class="contact__form__box__btn">wyślij</button>
+				<form autocomplete="on" class="contact__form__box">
+					<label for="name" class="contact__form__box__label">Twoje imię</label>
+					<input
+						type="text"
+						class="contact__form__box__input contact__form__box__border"
+						id="name"
+						autocomplete="name"
+						required />
+					<label for="email" class="contact__form__box__label"
+						>Twój adres email</label
+					>
+					<input
+						type="text"
+						class="contact__form__box__input contact__form__box__border"
+						id="email"
+						autocomplete="email"
+						required />
+					<label for="message" class="contact__form__box__label"
+						>Twoja wiadomość</label
+					>
+					<textarea
+						id="message"
+						cols="30"
+						rows="5"
+						class="contact__form__box__textarea contact__form__box__border"></textarea>
+					<button type="submit" class="contact__form__box__btn contact__form__box__border standard-btn">Wyślij</button>
 				</form>
+			</div>
+			<div class="contact__social contact__box">
+				<ul class="contact__social__list">
+					<li class="contact__social__list__item">
+						<a href=""
+							><i class="fa-brands fa-square-instagram"></i> instagram</a
+						>
+					</li>
+					<li class="contact__social__list__item">
+						<a href=""><i class="fa-brands fa-square-facebook"></i> facebook</a>
+					</li>
+					<li class="contact__social__list__item">
+						<a href=""><i class="fa-solid fa-phone"></i> 694 202 137</a>
+					</li>
+					<li class="contact__social__list__item">
+						<a
+							href="mailto:forest@forest.com"
+							target="_blank"
+							class="contact__social-item">
+							<i class="fa-solid fa-envelope"></i> forest@forest.com
+						</a>
+					</li>
+				</ul>
 			</div>
 			<div class="contact__map contact__box">
 				<iframe
