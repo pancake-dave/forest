@@ -11,6 +11,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding-bottom: 4rem;
     }
     &__form {
         width: 100%;
@@ -18,7 +19,6 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding-bottom: 2rem;
             &__label {
                 padding: 1em 0 .3em;
                 &:first-child {
@@ -43,13 +43,59 @@
     }
     &__social {
         &__list {
-            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            &__item {
+                padding-bottom: 1em;
+                color: $secondary-color;
+                text-decoration: none;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                i {
+                    padding-right: .5em;
+                }
+            }
         }
     }
     &__map {
         &__frame {
             height: 300px;
             width: 100%;
+        }
+    }
+}
+
+//MEDIA QUERIES
+
+@media ($media-small) {
+    .contact {
+        &__social {
+            &__list {
+                width: 80%;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr auto;
+                &__item {
+                    &__instagram {
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                    }
+                    &__facebook {
+                        grid-column: 1/2;
+                        grid-row: 2/3;
+                        padding-bottom: 0;
+                    }
+                    &__phone {
+                        grid-column: 2/3;
+                        grid-row: 1/2;
+                    }
+                    &__email {
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                    }
+                }
+            }
         }
     }
 }
