@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 0;
     &__box {
         display: flex;
         flex-direction: column;
@@ -14,6 +15,7 @@
         padding-bottom: 4rem;
     }
     &__form {
+        position: relative;
         width: 100%;
         &__box {
             display: flex;
@@ -21,6 +23,9 @@
             width: 100%;
             &__label {
                 padding: 1em 0 .3em;
+                &-warning {
+                    color: $warning-red;
+                }
                 &:first-child {
                     padding-top: 0;
                 }
@@ -37,7 +42,14 @@
                 &:focus-visible {
                     outline: 2px solid $focus-gray;
                     border: 1px solid transparent;
+                    background-color: $light-gray;
                 }
+            }
+            &__alert {
+                display: none;
+                padding-top: .5em;
+                align-self: center;
+                color: $warning-red;
             }
         }
     }
@@ -46,15 +58,19 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(4, 1fr);
+            row-gap: 1em;
             &__item {
-                padding-bottom: 1em;
                 color: $secondary-color;
                 text-decoration: none;
-                &:last-child {
-                    padding-bottom: 0;
-                }
+                transition: color .2s;
                 i {
                     padding-right: .5em;
+                }
+                &:hover {
+                    color: $inactive-gray;
+                }
+                &:focus-visible {
+                    outline: 2px solid $focus-gray;
                 }
             }
         }
@@ -65,6 +81,35 @@
             width: 100%;
         }
     }
+    &__popup {
+        position: absolute;
+        // display: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: display .2s;
+        z-index: 20;
+        &__box {
+            background-color: $main-color;
+            border-radius: 8px;
+            box-shadow: 0px 5px 10px rgba(0,0,0, .3);
+        }
+        &__text {
+            padding: 2em;
+        }
+    }
+    &__popup-visible {
+        display: block;
+    }
+    &__section-shadow {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,.4);
+        z-index: 10;
+    }
 }
 
 //MEDIA QUERIES
@@ -73,8 +118,8 @@
     .contact {
         &__social {
             &__list {
-                width: 80%;
                 grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 grid-template-rows: 1fr auto;
                 &__item {
                     &__instagram {
@@ -96,6 +141,64 @@
                     }
                 }
             }
+        }
+        &__map {
+            &__frame {
+                height: 350px;
+            }
+        }
+    }
+}
+
+@media ($media-medium) {
+    .contact {
+        &__social {
+            &__list {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-template-rows: 1fr auto;
+            }
+        }
+        &__map {
+            &__frame {
+                height: 350px;
+            }
+        }
+    }
+}
+
+@media ($media-large) {
+    .contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+        &__box {
+            padding-bottom: 5rem;
+            
+        }
+        &__form {
+            flex-basis: 55%;
+            order: 1;
+            &__box {
+                &__label {
+                    padding: .8em 0 .3em;
+                }
+                &__alert {
+                    padding-top: .8em;
+                }
+            }
+        }
+        &__social {
+            order: 3;
+            &__list {
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+                row-gap: 2em;
+            }
+        }
+        &__map {
+            flex-basis: 40%;
+            order: 2;
         }
     }
 }

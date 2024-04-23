@@ -10,6 +10,7 @@
 		<header class="header">
 			<!-- @include "nav_contact.kit" -->
 		</header>
+		<div class="contact__section-shadow"></div>
 		<div class="header__separator"></div>
 		<div class="contact section-padding wrapper">
 			<h2 class="contact__title section-title">skontaktuj się z nami</h2>
@@ -18,16 +19,17 @@
 					<label for="name" class="contact__form__box__label">Twoje imię</label>
 					<input
 						type="text"
-						class="contact__form__box__input contact__form__box__border"
+						class="contact__form__box__input contact__form__box__border contact-input-js"
 						id="name"
 						autocomplete="name"
 						required />
 					<label for="email" class="contact__form__box__label"
-						>Twój adres email</label
-					>
+						>Twój adres email
+						<span class="contact__form__box__label-warning"></span
+					></label>
 					<input
-						type="text"
-						class="contact__form__box__input contact__form__box__border"
+						type="email"
+						class="contact__form__box__input contact__form__box__border contact-input-js"
 						id="email"
 						autocomplete="email"
 						required />
@@ -38,20 +40,44 @@
 						id="message"
 						cols="30"
 						rows="5"
-						class="contact__form__box__textarea contact__form__box__border"></textarea>
+						class="contact__form__box__textarea contact__form__box__border contact-input-js"></textarea>
+					<p class="contact__form__box__alert">Wypełnij wszytskie pola!</p>
 					<button
-						type="submit"
+						type="button"
 						class="contact__form__box__btn contact__form__box__border standard-btn">
 						Wyślij
 					</button>
 				</form>
+				<div class="contact__popup">
+					<div class="contact__popup__box">
+						<p class="contact__popup__text">Wiadomość wysłana!</p>
+						<div class="contact__popup__btn">Zamknij</div>
+					</div>
+				</div>
 			</div>
 			<div class="contact__social contact__box">
 				<div class="contact__social__list">
-					<a href="https://www.instagram.com/" target="_blank" class="contact__social__list__item contact__social__list__item__instagram"><i class="fa-brands fa-square-instagram"></i>instagram</a>
-					<a href="https://www.facebook.com/" target="_blank" class="contact__social__list__item contact__social__list__item__facebook"><i class="fa-brands fa-square-facebook"></i>facebook</a>
-					<a href="tel:694202137" target="_blank" class="contact__social__list__item contact__social__list__item__phone"><i class="fa-solid fa-phone"></i>694 202 137</a>
-					<a href="mailto:forest@forest.com" class="contact__social__list__item contact__social__list__item__email"
+					<a
+						href="https://www.instagram.com/"
+						target="_blank"
+						class="contact__social__list__item contact__social__list__item__instagram"
+						><i class="fa-brands fa-square-instagram"></i>instagram</a
+					>
+					<a
+						href="https://www.facebook.com/"
+						target="_blank"
+						class="contact__social__list__item contact__social__list__item__facebook"
+						><i class="fa-brands fa-square-facebook"></i>facebook</a
+					>
+					<a
+						href="tel:694202137"
+						target="_blank"
+						class="contact__social__list__item contact__social__list__item__phone"
+						><i class="fa-solid fa-phone"></i>694 202 137</a
+					>
+					<a
+						href="mailto:forest@forest.com"
+						class="contact__social__list__item contact__social__list__item__email"
 						><i class="fa-solid fa-envelope"></i>forest@forest.com
 					</a>
 				</div>
@@ -70,6 +96,6 @@
 		</div>
 
 		<!-- @include "footer.kit" -->
-		<script src="./dist/js/script.min.js"></script>
+		<script src="./dist/js/contact.min.js"></script>
 	</body>
 </html>

@@ -83,6 +83,13 @@
 
 //MEDIA QUERIES
 
+@media ($media-medium) {
+    .contact__form__box__btn {
+        margin-top: 1.5em;
+        width: 40%;
+    }
+}
+
 @media ($media-large) {
     .offer__card__btn {
         padding: .4em 3em;

@@ -193,6 +193,30 @@ body {
             font-size: 4.4rem;
         }
     }
+    .contact {
+        &__form {
+            &__box {
+                &__label {
+                    font-size: 2rem;
+                }
+                &__input, 
+                &__textarea,
+                &__btn {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        &__social {
+            &__list {
+                &__item {
+                    font-size: 2rem;
+                    i {
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media ($media-xlarge) {
