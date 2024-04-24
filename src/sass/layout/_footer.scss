@@ -38,7 +38,7 @@
                 padding-left: 0;
                 text-decoration: none;
                 &:focus-visible {
-                    outline: none;
+                    outline: 2px solid $focus-gray;
                     font-weight: bold;
                 }
             }

@@ -10,88 +10,98 @@
 		<header class="header">
 			<!-- @include "nav_contact.kit" -->
 		</header>
-		<div class="contact__section-shadow"></div>
+		<div class="contact__popup__section-shadow contact-popup-js"></div>
 		<div class="header__separator"></div>
-		<div class="contact section-padding wrapper">
-			<h2 class="contact__title section-title">skontaktuj się z nami</h2>
-			<div class="contact__form contact__box">
-				<form autocomplete="on" class="contact__form__box">
-					<label for="name" class="contact__form__box__label">Twoje imię</label>
-					<input
-						type="text"
-						class="contact__form__box__input contact__form__box__border contact-input-js"
-						id="name"
-						autocomplete="name"
-						required />
-					<label for="email" class="contact__form__box__label"
-						>Twój adres email
-						<span class="contact__form__box__label-warning"></span
-					></label>
-					<input
-						type="email"
-						class="contact__form__box__input contact__form__box__border contact-input-js"
-						id="email"
-						autocomplete="email"
-						required />
-					<label for="message" class="contact__form__box__label"
-						>Twoja wiadomość</label
-					>
-					<textarea
-						id="message"
-						cols="30"
-						rows="5"
-						class="contact__form__box__textarea contact__form__box__border contact-input-js"></textarea>
-					<p class="contact__form__box__alert">Wypełnij wszytskie pola!</p>
-					<button
-						type="button"
-						class="contact__form__box__btn contact__form__box__border standard-btn">
-						Wyślij
-					</button>
-				</form>
-				<div class="contact__popup">
-					<div class="contact__popup__box">
-						<p class="contact__popup__text">Wiadomość wysłana!</p>
-						<div class="contact__popup__btn">Zamknij</div>
+		<div class="section-padding">
+			<div class="contact wrapper">
+				<h2 class="contact__title section-title">skontaktuj się z nami</h2>
+				<div class="contact__form contact__box">
+					<form autocomplete="on" class="contact__form__box">
+						<label for="name" class="contact__form__box__label"
+							>Twoje imię</label
+						>
+						<input
+							type="text"
+							class="contact__form__box__input contact__form__box__border contact-input-js"
+							id="name"
+							autocomplete="name"
+							required />
+						<label for="email" class="contact__form__box__label"
+							>Twój adres email
+							<span class="contact__form__box__label-warning"></span
+						></label>
+						<input
+							type="email"
+							class="contact__form__box__input contact__form__box__border contact-input-js"
+							id="email"
+							autocomplete="email"
+							required />
+						<label for="message" class="contact__form__box__label"
+							>Twoja wiadomość</label
+						>
+						<textarea
+							id="message"
+							cols="30"
+							rows="5"
+							class="contact__form__box__textarea contact__form__box__border contact-input-js"></textarea>
+						<p class="contact__form__box__alert">Wypełnij wszytskie pola!</p>
+						<button
+							type="button"
+							class="contact__form__box__btn contact__form__box__border standard-btn">
+							Wyślij
+						</button>
+					</form>
+					<div class="contact__popup contact-popup-js">
+						<div class="contact__popup__box">
+							<p class="contact__popup__text">Wiadomość wysłana!</p>
+							<button
+								class="contact__popup__btn contact__form__box__border standard-btn">
+								Zamknij
+							</button>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="contact__social contact__box">
-				<div class="contact__social__list">
-					<a
-						href="https://www.instagram.com/"
-						target="_blank"
-						class="contact__social__list__item contact__social__list__item__instagram"
-						><i class="fa-brands fa-square-instagram"></i>instagram</a
-					>
-					<a
-						href="https://www.facebook.com/"
-						target="_blank"
-						class="contact__social__list__item contact__social__list__item__facebook"
-						><i class="fa-brands fa-square-facebook"></i>facebook</a
-					>
-					<a
-						href="tel:694202137"
-						target="_blank"
-						class="contact__social__list__item contact__social__list__item__phone"
-						><i class="fa-solid fa-phone"></i>694 202 137</a
-					>
-					<a
-						href="mailto:forest@forest.com"
-						class="contact__social__list__item contact__social__list__item__email"
-						><i class="fa-solid fa-envelope"></i>forest@forest.com
-					</a>
+				<h3 class="contact__social__heading">
+					Sprawdź nasze social media, zadzwoń lub napisz do nas bezpośrednio!
+				</h3>
+				<div class="contact__social contact__box">
+					<div class="contact__social__list">
+						<a
+							href="https://www.instagram.com/"
+							target="_blank"
+							class="contact__social__list__item contact__social__list__item__instagram"
+							><i class="fa-brands fa-square-instagram"></i>instagram</a
+						>
+						<a
+							href="https://www.facebook.com/"
+							target="_blank"
+							class="contact__social__list__item contact__social__list__item__facebook"
+							><i class="fa-brands fa-square-facebook"></i>facebook</a
+						>
+						<a
+							href="tel:694202137"
+							target="_blank"
+							class="contact__social__list__item contact__social__list__item__phone"
+							><i class="fa-solid fa-phone"></i>694 202 137</a
+						>
+						<a
+							href="mailto:forest@forest.com"
+							class="contact__social__list__item contact__social__list__item__email"
+							><i class="fa-solid fa-envelope"></i>forest@forest.com
+						</a>
+					</div>
 				</div>
-			</div>
-			<div class="contact__map contact__box">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.846237987554!2d19.88972679713552!3d50.08916563989637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1713529974289!5m2!1spl!2spl"
-					width=""
-					height=""
-					style="border: 0"
-					allowfullscreen=""
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"
-					class="contact__map__frame"></iframe>
+				<div class="contact__map contact__box">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.846237987554!2d19.88972679713552!3d50.08916563989637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1713529974289!5m2!1spl!2spl"
+						width=""
+						height=""
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						class="contact__map__frame"></iframe>
+				</div>
 			</div>
 		</div>
 
