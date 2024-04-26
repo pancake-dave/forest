@@ -68,8 +68,20 @@
 }
 
 .contact__popup__btn {
-    
     padding: 1em 2em;
+}
+
+.offer__cards__link-btn {
+    width: 270px;
+    padding: 1em 2em;
+    text-align: center;
+    &__text {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: $secondary-color;
+    }
 }
 
 .standard-btn {
@@ -93,10 +105,19 @@
         margin-top: 1.5em;
         width: 40%;
     }
+    .offer__cards__link-btn {
+        flex-basis: 80%;
+    }
 }
 
 @media ($media-large) {
     .offer__card__btn {
         padding: .4em 3em;
+    }
+}   
+
+@media ($media-xlarge) {
+    .offer__cards__link-btn {
+        flex-basis: 60%;
     }
 }   
