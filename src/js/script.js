@@ -31,6 +31,11 @@ const handleDesktopNav = (e) => {
 				section.offsetTop == currentPosition
 			) {
 				observerEnabled = true;
+			} else if (
+				window.innerHeight + window.scrollY >=
+				document.body.scrollHeight
+			) {
+				observerEnabled = true;
 			}
 		});
 	});
@@ -65,11 +70,11 @@ const observer = new IntersectionObserver(handleIntersection, {
 });
 
 const currentDate = () => {
-	const date = new Date()
-	footerYear.innerText = date.getFullYear()
-}
+	const date = new Date();
+	footerYear.innerText = date.getFullYear();
+};
 
-currentDate()
+currentDate();
 allSections.forEach((section) => {
 	observer.observe(section);
 });
