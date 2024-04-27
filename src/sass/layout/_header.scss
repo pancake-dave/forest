@@ -10,7 +10,7 @@
         position: relative;
         display: grid;
         grid-template-rows: repeat(3, 1fr);
-        background-image: url("dist/img/jungle_small.jpg");
+        background-image: url("/dist/img/jungle_small.jpg");
         background-position: center 70%;
         background-size: cover;
         height: 40vh;
@@ -32,7 +32,7 @@
 @media ($media-medium) {
     .header {
         &__hero {
-            background-image: url("dist/img/jungle_large.jpg");
+            background-image: url("/dist/img/jungle_large.jpg");
         }
     }
 }
@@ -43,7 +43,7 @@
             height: 9rem;
         }
         &__hero {
-            background-image: url("dist/img/jungle_xlarge.jpg");
+            background-image: url("/dist/img/jungle_xlarge.jpg");
             height: 50vh;
             &__text {
                 align-self: center;
