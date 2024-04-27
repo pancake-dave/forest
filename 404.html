@@ -28,12 +28,12 @@
 </button>
 <nav class="nav nav-mobile">
 	<div class="wrapper nav-mobile__items">
-		<a href="/index.html" class="nav-mobile__link nav-link"
+		<a aria-label="Przejdź do strony głównej" href="/index.html" class="nav-mobile__link nav-link"
 			>Home</a
 		>
-		<a href="index.html#about-us" class="nav-mobile__link nav-link">O nas</a>
-		<a href="index.html#offer" class="nav-mobile__link nav-link">Oferta</a>
-		<a href="contact.html" class="nav-mobile__link nav-link">Kontakt</a>
+		<a aria-label="Przejdź do sekji o nas na stronie głównej" href="index.html#about-us" class="nav-mobile__link nav-link">O nas</a>
+		<a aria-label="Przejdź do sekji oferta na stronie głównej" href="index.html#offer" class="nav-mobile__link nav-link">Oferta</a>
+		<a aria-label="Przejdź do strony kontaktowej" href="contact.html" class="nav-mobile__link nav-link">Kontakt</a>
 	</div>
 	<div class="logo nav-mobile__logo">
 		<img src="dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
@@ -46,12 +46,12 @@
 			<img src="dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
 			<p class="logo-text">Forest</p>
 		</div>
-		<a href="index.html" class="nav-desktop__link nav-link nav-link-home nav-desktop__link--active"
+		<a aria-label="Przejdź do strony głównej" href="index.html" class="nav-desktop__link nav-link nav-link-home nav-desktop__link--active"
 			>Home</a
 		>
-		<a href="index.html#about-us" class="nav-desktop__link nav-link nav-link-aboutus">O nas</a>
-		<a href="index.html#offer" class="nav-desktop__link nav-link nav-link-offer">Oferta</a>
-		<a href="contact.html" class="nav-desktop__link nav-link nav-link-contact">Kontakt</a>
+		<a aria-label="Przejdź do sekji o nas na stronie głównej" href="index.html#about-us" class="nav-desktop__link nav-link nav-link-aboutus">O nas</a>
+		<a aria-label="Przejdź do sekji oferta na stronie głównej" href="index.html#offer" class="nav-desktop__link nav-link nav-link-offer">Oferta</a>
+		<a aria-label="Przejdź do strony kontaktowej" href="contact.html" class="nav-desktop__link nav-link nav-link-contact">Kontakt</a>
 	</div>
 </nav>
 
@@ -63,16 +63,20 @@
 					<div class="not_found__content">
 						<img
 							src="dist/img/404.jpg"
-							alt="Obraz z napisem 404"
+							alt="Obrazek z napisem 404"
 							class="not_found__img" />
 						<a
+							aria-label="Przejdź do zewnętrznej strony zawierającej informacje na temat obrazka 404"
 							href="https://www.freepik.com/free-vector/404-error-with-landscape-concept-illustration_20602785.htm#fromView=search&page=1&position=2&uuid=b9529052-8fe1-4492-aab7-2534bdd96c77"
 							class="not_found__attribution not_found__link"
 							>Image by storyset on Freepik</a
 						>
 						<p class="not_found__text">
 							Ups... wygląda na to, że zabłądziłeś. Chcesz wrócić na
-							<a href="index.html" class="not_found__text__link not_found__link"
+							<a
+								aria-label="Przejdź do strony głównej"
+								href="index.html"
+								class="not_found__text__link not_found__link"
 								>stronę główną?
 							</a>
 						</p>
@@ -88,26 +92,26 @@
 		</div>
 		<div class="footer__content__box footer__content__box__aboutus">
 			<h3 class="footer__content__heading">O nas</h3>
-			<ul class="footer__content__list">
+			<div class="footer__content__list">
 				<a href="#" class="footer__content__list__item">Historia</a>
 				<a href="#" class="footer__content__list__item">Parki</a>
 				<a href="#" class="footer__content__list__item">Opinie</a>
-			</ul>
+			</div>
 		</div>
 		<div class="footer__content__box footer__content__box__company">
 			<h3 class="footer__content__heading">Nasza firma</h3>
-			<ul class="footer__content__list">
+			<div class="footer__content__list">
 				<a href="#" class="footer__content__list__item">Praca</a>
 				<a href="#" class="footer__content__list__item">Kadry</a>
 				<a href="#" class="footer__content__list__item">Zarząd</a>
-			</ul>
+			</div>
 		</div>
 		<div class="footer__content__box footer__content__box__docs">
 			<h3 class="footer__content__heading">Dokumenty</h3>
-			<ul class="footer__content__list">
+			<div class="footer__content__list">
 				<a href="#" class="footer__content__list__item">Wnioski</a>
 				<a href="#" class="footer__content__list__item">Rezerwacje</a>
-			</ul>
+			</div>
 		</div>
 		<div class="footer__date">
 			<p class="footer__date__text">
