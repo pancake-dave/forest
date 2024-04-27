@@ -34,7 +34,7 @@
     position: relative;
     display: flex;
     height: 25vh;
-    background-image: url("/dist/img/girl_small.jpg");
+    background-image: url("../../dist/img/girl_small.jpg");
     background-position: center;
     background-size: 100%;
     transition: background-size 2s;
@@ -137,7 +137,7 @@
     }
     .separator-row {
         height: 40vh;
-        background-image: url("/dist/img/girl_large.jpg");
+        background-image: url("../../dist/img/girl_large.jpg");
     }
     .offer__caption {
         padding-bottom: 5rem;
@@ -151,7 +151,7 @@
         }
     }
     .separator-row {
-        background-image: url("/dist/img/girl_xlarge.jpg");
+        background-image: url("../../dist/img/girl_xlarge.jpg");
     }
     .offer__cards {
         justify-content: center;
