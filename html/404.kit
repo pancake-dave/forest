@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<!-- @include "head.kit" -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest - ups...</title>
+		<!-- @include "head.kit" -->
+	</head>
 	<body>
-        <!-- @include "nav.kit" -->
-		<p>Strona główna!</p>
-        <!-- @include "footer.kit" -->
+		<header class="header">
+			<!-- @include "nav_404.kit" -->
+			<div class="header__separator"></div>
+		</header>
+		<main>
+			<div class="not_found section-padding">
+				<div class="wrapper">
+					<div class="not_found__content">
+						<img
+							src="/dist/img/404.jpg"
+							alt="Obraz z napisem 404"
+							class="not_found__img" />
+						<a
+							href="https://www.freepik.com/free-vector/404-error-with-landscape-concept-illustration_20602785.htm#fromView=search&page=1&position=2&uuid=b9529052-8fe1-4492-aab7-2534bdd96c77"
+							class="not_found__attribution not_found__link"
+							>Image by storyset on Freepik</a
+						>
+						<p class="not_found__text">
+							Ups... wygląda na to, że zabłądziłeś. Chcesz wrócić na
+							<a href="/index.html" class="not_found__text__link not_found__link"
+								>stronę główną?
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- @include "footer.kit" -->
 		<script src="./dist/js/script.min.js"></script>
 	</body>
 </html>

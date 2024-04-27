@@ -71,16 +71,21 @@
     padding: 1em 2em;
 }
 
-.offer__cards__link-btn {
-    width: 270px;
-    padding: 1em 2em;
-    text-align: center;
-    &__text {
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color: $secondary-color;
+.offer__cards__link {
+    &:focus-visible {
+        outline: none;
+    }
+    &:focus-visible > &__btn {
+            background-color: $green;       
+            box-shadow: 0px 5px 10px rgba(42, 222, 114, .7);
+            outline: none;
+        }
+    &__btn {
+        width: 270px;
+        padding: .8em 2em;
+        i {
+            padding-left: .5em;
+        }
     }
 }
 
@@ -105,8 +110,10 @@
         margin-top: 1.5em;
         width: 40%;
     }
-    .offer__cards__link-btn {
-        flex-basis: 80%;
+    .offer__cards__link {
+        &__btn {
+            width: 600px;
+        }
     }
 }
 
@@ -117,7 +124,9 @@
 }   
 
 @media ($media-xlarge) {
-    .offer__cards__link-btn {
-        flex-basis: 60%;
+    .offer__cards__link {
+        &__btn {
+            width: 800px;
+        }
     }
 }   

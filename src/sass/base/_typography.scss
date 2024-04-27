@@ -60,6 +60,11 @@ body {
     font-weight: 700;
 }
 
+.offer {
+    &__caption {
+        font-size: 1.8rem;
+    }
+}
 .offer__card {
     &__list-item--inactive {
         color: $inactive-gray;
@@ -77,6 +82,16 @@ body {
     &__btn {
         font-family: "Raleway", sans-serif;
         font-size: 1.6rem;
+    }
+}
+
+.offer__cards {
+    &__link {
+        &__btn {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
     }
 }
 
@@ -108,6 +123,7 @@ body {
             &__btn {
                 font-family: "Raleway", sans-serif;
                 font-size: 1.6rem;
+                font-weight: 500;
                 text-transform: uppercase;
             }
         }
@@ -130,6 +146,22 @@ body {
             font-family: "Raleway", sans-serif;
                 font-size: 1.4rem;
         }
+    }
+}
+
+.not_found {
+    &__text {
+        font-size: 2rem;
+        &__link {
+            text-decoration: none;
+            color: $secondary-color;
+            font-weight: bold;
+        }
+    }
+    &__attribution {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: $inactive-gray;
     }
 }
 
@@ -182,6 +214,9 @@ body {
         font-size: 3.6rem;
     }
     .offer {
+        &__caption {
+            font-size: 2rem;
+        }
         &__card {
             &__title {
                 font-size: 2.6rem;
@@ -194,6 +229,13 @@ body {
             }
             &__btn {
                 font-size: 2rem;
+            }
+        }
+        &__cards {
+            &__link {
+                &__btn {
+                    font-size: 2.4rem;
+                }
             }
         }
     }
@@ -237,6 +279,11 @@ body {
             }
         }
     }
+    .not_found {
+        &__text {
+            font-size: 2.4rem;
+        }
+    }
 }
 
 @media ($media-xlarge) {
@@ -256,4 +303,3 @@ body {
         font-size: 4.6rem;
     }
 }
-

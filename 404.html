@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<link
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest - ups...</title>
+		<link
 	rel="shortcut icon"
 	href="/dist/img/icons/forest_logo_favicon.svg"
 	type="image/x-icon" />
@@ -14,19 +18,21 @@
 	src="https://kit.fontawesome.com/915f00f029.js"
 	crossorigin="anonymous"></script>
 
+	</head>
 	<body>
-        <button class="burger-btn">
+		<header class="header">
+			<button class="burger-btn">
 	<div class="burger-btn__box">
 		<div class="burger-btn__bars"></div>
 	</div>
 </button>
 <nav class="nav nav-mobile">
 	<div class="wrapper nav-mobile__items">
-		<a href="#home" class="nav-mobile__link nav-link"
+		<a href="/index.html" class="nav-mobile__link nav-link"
 			>Home</a
 		>
-		<a href="#about-us" class="nav-mobile__link nav-link">O nas</a>
-		<a href="#offer" class="nav-mobile__link nav-link">Oferta</a>
+		<a href="/index.html#about-us" class="nav-mobile__link nav-link">O nas</a>
+		<a href="/index.html#offer" class="nav-mobile__link nav-link">Oferta</a>
 		<a href="/contact.html" class="nav-mobile__link nav-link">Kontakt</a>
 	</div>
 	<div class="logo nav-mobile__logo">
@@ -40,17 +46,41 @@
 			<img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
 			<p class="logo-text">Forest</p>
 		</div>
-		<a href="#home" class="nav-desktop__link nav-link nav-link-home nav-desktop__link--active"
+		<a href="/index.html" class="nav-desktop__link nav-link nav-link-home nav-desktop__link--active"
 			>Home</a
 		>
-		<a href="#about-us" class="nav-desktop__link nav-link nav-link-aboutus">O nas</a>
-		<a href="#offer" class="nav-desktop__link nav-link nav-link-offer">Oferta</a>
+		<a href="/index.html#about-us" class="nav-desktop__link nav-link nav-link-aboutus">O nas</a>
+		<a href="/index.html#offer" class="nav-desktop__link nav-link nav-link-offer">Oferta</a>
 		<a href="/contact.html" class="nav-desktop__link nav-link nav-link-contact">Kontakt</a>
 	</div>
 </nav>
 
-		<p>Strona główna!</p>
-        <footer class="footer section-padding">
+			<div class="header__separator"></div>
+		</header>
+		<main>
+			<div class="not_found section-padding">
+				<div class="wrapper">
+					<div class="not_found__content">
+						<img
+							src="/dist/img/404.jpg"
+							alt="Obraz z napisem 404"
+							class="not_found__img" />
+						<a
+							href="https://www.freepik.com/free-vector/404-error-with-landscape-concept-illustration_20602785.htm#fromView=search&page=1&position=2&uuid=b9529052-8fe1-4492-aab7-2534bdd96c77"
+							class="not_found__attribution not_found__link"
+							>Image by storyset on Freepik</a
+						>
+						<p class="not_found__text">
+							Ups... wygląda na to, że zabłądziłeś. Chcesz wrócić na
+							<a href="/index.html" class="not_found__text__link not_found__link"
+								>stronę główną?
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer section-padding">
 	<div class="footer__content wrapper">
 		<div class="logo footer__logo">
 			<img src="../dist/img/icons/forest_logo.svg" alt="" class="logo-icon" />
