@@ -7,7 +7,6 @@ const alertMsg = document.querySelector(".contact__form__box__alert");
 const alertEmail = document.querySelector(".contact__form__box__label-warning");
 const popupElements = document.querySelectorAll(".contact-popup-js");
 const popupBtn = document.querySelector('.contact__popup__btn')
-const footerYear = document.querySelector(".footer__year");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const checkForm = () => {
@@ -42,12 +41,6 @@ const handlePupup = () => {
 	})
 }
 
-const currentDate = () => {
-	const date = new Date()
-	footerYear.innerText = date.getFullYear()
-}
-
-currentDate()
 submitBtn.addEventListener("click", checkForm);
 popupBtn.addEventListener("click", handlePupup);
 

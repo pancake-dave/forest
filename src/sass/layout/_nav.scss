@@ -21,7 +21,7 @@
         height: 60%;
     }
     &__link {
-        padding: 1.5em 2em;
+        padding: .6em 2em;
     }
     &__logo {
         position: absolute;
@@ -106,6 +106,14 @@
 }
 
 //MEDIA QUERIES
+
+@media (min-height: 450px) {
+    .nav-mobile {
+        &__link {
+            padding: 1.5em 2em;
+        }
+    }
+}
 
 @media ($media-large) {
     .burger-btn {
