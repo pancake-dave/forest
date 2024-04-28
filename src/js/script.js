@@ -21,21 +21,16 @@ const handleDesktopNav = (e) => {
 		const currentPosition = window.scrollY;
 		const target = e.target.getAttribute("href").substring(1);
 		allSections.forEach((section) => {
-			if (
+			const conditions = [
 				section.classList.contains(target) &&
-				section.offsetTop == currentPosition + 90
-			) {
-				observerEnabled = true;
-			} else if (
+					section.offsetTop == currentPosition + 90,
 				section.classList.contains("home") &&
-				section.offsetTop == currentPosition
-			) {
+					section.offsetTop == currentPosition,
+				window.innerHeight + window.scrollY >= document.body.scrollHeight,
+			];
+			if (conditions.includes(true)) {
 				observerEnabled = true;
-			} else if (
-				window.innerHeight + window.scrollY >=
-				document.body.scrollHeight
-			) {
-				observerEnabled = true;
+				console.log('test ok');
 			}
 		});
 	});
@@ -81,7 +76,6 @@ allSections.forEach((section) => {
 navDesktopItems.forEach((item) => {
 	item.addEventListener("click", handleDesktopNav);
 });
-navMobileItems.forEach((item) => {
-	item.addEventListener("click", handleMobileNav);
+[burgerBtn, ...navMobileItems].forEach((item) => {
+    item.addEventListener("click", handleMobileNav);
 });
-burgerBtn.addEventListener("click", handleMobileNav);

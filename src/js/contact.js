@@ -9,6 +9,16 @@ const popupElements = document.querySelectorAll(".contact-popup-js");
 const popupBtn = document.querySelector('.contact__popup__btn')
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const validateEmail = (email) => {
+	return emailRegex.test(email);
+};
+
+const handlePopup = () => {
+	popupElements.forEach((item) => {
+		item.classList.toggle('contact__popup-visible')
+	})
+}
+
 const checkForm = () => {
 	if (nameInput.value == "" || emailInput.value == "" || msgInput.value == "") {
 		alertMsg.style.display = "block";
@@ -25,22 +35,12 @@ const checkForm = () => {
 			alertEmail.innerText = "";
 			allInputs.forEach((input) => {
 				input.value = "";
-			handlePupup()
+			handlePopup()
 			});
 		}
 	}
 };
 
-const validateEmail = (email) => {
-	return emailRegex.test(email);
-};
-
-const handlePupup = () => {
-	popupElements.forEach((item) => {
-		item.classList.toggle('contact__popup-visible')
-	})
-}
-
 submitBtn.addEventListener("click", checkForm);
-popupBtn.addEventListener("click", handlePupup);
+popupBtn.addEventListener("click", handlePopup);
 
